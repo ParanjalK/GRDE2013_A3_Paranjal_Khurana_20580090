@@ -1,5 +1,19 @@
+/*  # for id
+    . for class
+      for other functions */
+
+  /*imports local fonts*/
+  @font-face {
+    font-family: DProRegCon;
+    src: url();
+}
+@font-face {
+    font-family: TSS;
+    src: url();
+}
+
 body {
-    background-color: orange;
+    background-color: rgb(233, 228, 219);
 }
 
 a {
