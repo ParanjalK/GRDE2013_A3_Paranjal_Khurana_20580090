@@ -5,24 +5,35 @@
   /*imports local fonts*/
   @font-face {
     font-family: DProRegCon;
-    src: url();
+    src: url(fonts/DugasPro-BlackSemi-condensed.ttf);
 }
 @font-face {
-    font-family: TSS;
-    src: url();
+    font-family: ActayReg;
+    src: url(fonts/Actay-Regular.otf);
+}
+@font-face {
+    font-family: ActayRegItc;
+    src: url(fonts/Actay-RegularItalic.otf);
 }
 
 body {
     background-color: rgb(233, 228, 219);
 }
 
-a {
+li a {
+    display: inline;
     text-decoration: none;
     color: black;
 }
 
-a:hover {
+li a:hover {
     color: rgb(191, 14, 14);
+}
+
+h1 {
+    font-family: DProRegCon;
+    font-size: 5vw;
+    color: rgb(128, 35, 16);
 }
 
 #navbar {
