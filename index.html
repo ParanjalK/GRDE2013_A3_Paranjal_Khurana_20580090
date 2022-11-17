@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="anime-master/lib/anime.min.js"></script>
+    <script src="gsap-public/minified/gsap.min.js"></script>
     <title>Glossy Side Up</title>
 </head>
 <!--shoelace components to use
@@ -15,7 +20,7 @@
     animations to include
     - loading animation
     - landing page animation
-    - scroll down prompt animation -->
+    - scroll down prompt animation-->
 <body>
     <div id="header"></div>
 
@@ -32,36 +37,161 @@
 
     <div id="materials">
         <ul>
-            <li>Paterson Tank</li>
-            <li>Film Spool</li>
-            <li>Graduated Measuring Cylinders</li>
-            <li>Darkbag/Darkbox</li>
             <li>Developer (we'll be using Ilford ID-11)</li>
             <li>Stopbath (we'll be using Ilford Ilfostop)</li>
             <li>Fixer (we'll be using Ilford Rapid Fixer)</li>
             <li>Washaid - optional (we'll be using Ilford Ilfotol)</li>
-            <li>Thermometer</li>
-            <li>Scissors</li>
-            <li>Side cutting pliers</li>
-            <li>Airtight storage bottles (preferably glass)</li>
-            <li>Film clips</li>
             <li>Distilled water - optional (use if your tap water is high in minerals)</li>
         </ul>
 
     </div>
 
     <div id="shop">
-        <div class="row">
-            <div class="column">
-              <img src="/images/" alt="Snow" style="width:100%">
-            </div>
-            <div class="column">
-              <img src="img_forest.jpg" alt="Forest" style="width:100%">
-            </div>
-            <div class="column">
-              <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-            </div>
-        </div>
+        <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/tank.jpeg"
+              alt="Paterson Tank Kit"
+            />
+            Paterson Tank Kit
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/darkbag.jpeg"
+              alt="Darkbag"
+            />
+            Darkbag
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/measuringcylinder.jpeg"
+              alt="Graduated Measuring Cylinders"
+            />
+            Graduated Measuring Cylinder
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/thermometer.jpg"
+              alt="Thermometer"
+            />
+            Thermometer
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/scissors.jpg"
+              alt="Scissors"
+            />
+            Scissors
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/pliers.jpg"
+              alt="Pliers"
+            />
+            Pliers
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/clips.jpeg"
+              alt="Clips"
+            />
+            Clips
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/bottle.jpeg"
+              alt="Bottle"
+            />
+            Bottle
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/developer.jpeg"
+              alt="Developer"
+            />
+            Developer
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/stopbath.jpg"
+              alt="Stopbath"
+            />
+            Stopbath
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/fixer.jpeg"
+              alt="Fixer"
+            />
+            Fixer
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/washaid.jpeg"
+              alt="Washaid"
+            />
+            Washaid
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/washer.jpeg"
+              alt="Pressure Washer"
+            />
+            Pressure Washer
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/squeegee.jpeg"
+              alt="Squeegee"
+            />
+            Squeegee
+          </sl-card>
+        </sl-card>
+        <sl-card class="card-image"> <!--imported from Shoelace UI-->
+          <img
+            slot="image"
+            src="images/waste.jpg"
+            alt="Waste Container"
+          />
+          Waste Container
+        </sl-card>
+        <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/funnel.jpeg"
+              alt="Funnel"
+            />
+            Funnel
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/towel.jpg"
+              alt="Microfibre Towel"
+            />
+            Microfibre Towel
+          </sl-card>
+          <sl-card class="card-image"> <!--imported from Shoelace UI-->
+            <img
+              slot="image"
+              src="images/sleeves.jpg"
+              alt="Sleeves"
+            />
+            Sleeves
+          </sl-card>
     </div>
 
     <div id="method">
@@ -71,7 +201,6 @@
     <div id="footer">
         
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
