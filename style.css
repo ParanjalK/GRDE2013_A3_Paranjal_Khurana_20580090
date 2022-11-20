@@ -33,9 +33,19 @@ h1 {
     text-align: center;
 }
 
+sl-card {
+    margin: 0.5vw;
+    --border-width: 0.1vw;
+    --border-color: black;
+}
+
 .card-image {
     max-width: 15vw;
     font-family: ActayReg;
+    /* things that appeared in the console when I inspected
+    my website that needed to go away so I could have my rounded corners.
+    They alter the default styling built into the Shoelace UI component. */
+    --border-radius: 1vw;
   }
 
 #equipment {
@@ -43,4 +53,23 @@ h1 {
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
+}
+
+#method {
+    overflow: scroll;
+}
+
+#back-shape {
+    border-radius: 1vw;
+    background: #a9a99a;
+    width: 95vw;
+    height: 50vw; 
+    display: inline-flexbox;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+#slides-nav {
+    text-align:center;
 }
